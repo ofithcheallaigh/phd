@@ -14,3 +14,9 @@ Below is a list of keywords to be used in lit. searchers for my project.
 - Data Privacy
 - Transfer Learning
 - Federated Averaging
+
+# Databases to Search
+- IEEE Xplore
+- Scopus
+- Science Direct
+- ACM Digital Library
