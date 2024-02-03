@@ -14,6 +14,8 @@ Below is a list of keywords to be used in lit. searchers for my project.
 - Data Privacy
 - Transfer Learning
 - Federated Averaging
+- Manufacturing
+- Intrusion detection
 
 # Databases to Search
 - IEEE Xplore
