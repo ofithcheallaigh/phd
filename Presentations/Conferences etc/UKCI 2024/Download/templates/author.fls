@@ -1,0 +1,6 @@
+PWD c:/Users/B00830189/OneDrive - Ulster University/PhD/phd/Presentations/Conferences etc/UKCI 2024/Download/templates
+INPUT c:/texlive/2024/texmf.cnf
+INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/B00830189/OneDrive - Ulster University/PhD/phd/Presentations/Conferences etc/UKCI 2024/Download/templates/author.tex
+OUTPUT author.log
