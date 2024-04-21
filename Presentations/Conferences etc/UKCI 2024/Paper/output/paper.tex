@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a proceedings volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{svproc}
+% \documentclass[citeauthoryear]{svproc}
+%
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% to typeset URLs, URIs, and DOIs
+\usepackage{url}
+\def\UrlFont{\rmfamily}
+
+\begin{document}
+\mainmatter              % start of a contribution
+%
+\title{An Embedded Machine Learning Approach to Assist Navigation for People with Visual Impairments\\}
+%
+\titlerunning{Hamiltonian Mechanics}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{{Se{\'a}n {\'O} Fithcheallaigh\textsuperscript{1} \and Ian Cleland\textsuperscript{1}}}
+%
+\authorrunning{Se{\'a}n {\'O} Fithcheallaigh et al.} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+% \tocauthor{Ivar Ekeland, Roger Temam, Jeffrey Dean, David Grove,
+% Craig Chambers, Kim B. Bruce, and Elisa Bertino}
+%
+\institute{Department of Computing, Ulster University, Belfast, N. Ireland,\\
+\email{o\_fithcheallaigh-s@ulster.ac.uk}\\ 
+% WWW home page:
+% \texttt{http://users/\homedir iekeland/web/welcome.html}
+% \and
+% Universit\'{e} de Paris-Sud,
+% Laboratoire d'Analyse Num\'{e}rique, B\^{a}timent 425,\\
+% F-91405 Orsay Cedex, France}
+}
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+    An ever-increasing number of people are living with visual impairments. 
+    As the machine learning techniques evolve alongside improving hardware available on embedded devices, 
+    there exists the potential to develop a system which can detect and localise objects in an indoor setting. 
+    This system would aim to detect objects and localise them, thereby allowing the user to navigate 
+    around these obstacles in an unfamiliar environment. 
+    The work presented here show the initial investigations into the development of such a system. 
+    The information presented will cover the investigation of a number of machine learning techniques as well as 
+    the deployment of a model onto a constrained device. 
+
+    \keywords{Machine Learning, Deep Learning, Embedded Systems, The Edge, Neural Networks, Arduino}
+\end{abstract}
+
+\section{Introduction}
+% This research is related to the testing and development of an obstacle avoidance and navigation system for people with sight difficulties. The initial part of this section will give background information on why systems like this are needed, and will then move into a more detailed exploration of the research.
+\subsection{The lives of people dealing with sight loss}
+There are over two million people in the UK who live with sight loss; where sight loss includes: 
+people who are registered blind or partially sighted; people whose vision is better than the levels that 
+qualify for registration; people who are awaiting or having treatment such as injections, laser treatment or 
+surgery that may improve their sight; Correctly prescribed glasses or contact lenses could improve 
+the sight of people who have sight loss \cite{b1}. Experts also predict that the number of people 
+suffering from sight loss will double to over four million by 2050 \cite{b2}. The main reason for 
+sight loss includes age-related macular degeneration (AMD), uncorrected refractive errors and cataracts \cite{b1}. 
+
+Individuals who have visual impairments tend to avoid unfamiliar environments, which can have adverse effects 
+on their overall health and wellness. Obstacle detection and warning can improve the mobility and safety of 
+visually impaired people, particularly in unfamiliar environments, which can help facilitate the journeys they 
+need to do. However, transport systems are not built with the visually impaired in mind \cite{b2}. 
+It is likely that this contributes to the limitation of four out of every ten blind individuals who can 
+only complete some of the journeys they require or desire. \cite{b1}.
+
+Visually impaired people face many issues when navigating their journey, such as understanding 
+how to reach their destination. Typically, the route to a destination will stay the same - streets 
+remain in the same place, and road crossings tend not to move. However, another issue they face is 
+random obstacles placed in their path. These are things that a visually impaired person could have no way 
+of knowing are there. Of course, aids such as the white cane can be used to assist with this kind of issue. 
+However, not everyone may want to use a cane (potentially because of the signal that sends: I am different, I have an impairment). 
+Another reason could be because, although a person may be registered as blind, they may still have some 
+level of vision (as many do) and do not wish to give up a level of independence completely. 
+
+\subsection{The Problem}
+A need exists to develop systems that can assist visually impaired people in navigating their surroundings. 
+In any proposed navigation system for the visually impaired, obstacles must first be detected and localised. 
+Then, navigation information must be communicated to the person, allowing them to avoid obstacles. 
+Using various modalities such as voice, tactile feedback, and vibration could facilitate the achievement of this goal.
+ 
+This research proposes using machine learning methods within a constrained device to develop a solution that can 
+detect obstacles in the path of a visually impaired user navigating an indoor environment. 
+
+A constrained device is something that works at "the Edge". Devices that work at the Edge will typically do any 
+data processing and analysis on the device itself. This allows for a reduction in the time it takes for a system to get a result. 
+This reduction in time, or latency, is critical in the system this research aims to investigate. 
+Power is another important constraint when dealing with Edge devices, and is obviously very important when 
+developing a portable navigation system, as it will need to run under its own power. 
+Memory is another important consideration when working at the Edge. This means that any proposed model 
+must be able to be stored in the device's memory, and still be able to take in sensor data for processing. 
+
+Several tasks will need to be completed to determine the system's feasibility. The first step will be the investigation 
+of various sensor modalities in order to determine the most appropriate sensor or combination of sensors. 
+Then a dataset will be gathered covering a range of obstacle detection and avoidance scenarios. This dataset will then 
+be used to train, test, and validate several Deep Learning and machine learning models to understand which is 
+best at detecting and localising obstacles. Development work will then be done to allow this model to be implemented on a 
+constrained device, and the performance of the final model will be assessed against critical parameters.
+
+\subsection{Paper Structure}
+The paper will present information on the technical aspects of machine learning at the Edge, as well as work on related research. 
+There follows a discussion on data capture and the initial analysis that was carried out using classification algorithms. From there 
+the discussion moves on to the investigation carried out on neural networks and the deployment of the system on a constrained device. 
+The final sections will be an evaluation of the deployed model and a discussion on potential future work.
+
+\section{Technical Review}
+
+
+%
+% ---- Bibliography ----
+%
+\begin{thebibliography}{00}
+%
+\bibitem{b1} 
+RNIB, "Key stats about sight loss 2021," 2021. [Online]. 
+Available: \url{https://media.rnib.org.uk/documents/Key_stats_about_sight_loss_2021.pdf.} [Accessed 3 2 2023].
+
+\bibitem{b2} 
+L. Pezzullo, J. Streatfeild, P. Simkiss and D. Shickle, 
+"The economic impact of sight loss and blindness in the UK adult population," BMC Health Services Research, vol. 18, 2018.
+
+\end{thebibliography}
+
+\end{document}
