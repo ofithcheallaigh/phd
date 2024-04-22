@@ -4,7 +4,8 @@ from omegaconf import DictConfig, OmegaConf
 
 @hydra.main(config_path="conf", config_name="base", version_base=None)
 def main(cfg: DictConfig):
-    # Do things
+    
+    # Parse the config and get experiment output dir
     print(OmegaConf.to_yaml(cfg))
 
 
