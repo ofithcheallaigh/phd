@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.20)  21 APR 2024 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.20)  28 APR 2024 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -154,6 +154,30 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 379.
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen163
+\Gin@req@width=\dimen164
+)
 (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count292
@@ -162,26 +186,48 @@ File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 45.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+ (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count293
+\scratchdimen=\dimen165
+\scratchbox=\box100
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen166
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks23
+) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 
-Overfull \hbox (0.50822pt too wide) in paragraph at lines 57--58
+(c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 47.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 47.
+
+Overfull \hbox (0.50822pt too wide) in paragraph at lines 59--60
 \OT1/cmr/bx/n/9 Keywords:\OT1/cmr/m/n/9 Machine Learn-ing, Deep Learn-ing, Em-b
 ed-ded Sys-tems, The
  []
@@ -189,37 +235,118 @@ ed-ded Sys-tems, The
 [1
 
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+[4] [5] [6] [7]
+<images/hallway1.png, id=32, 332.74312pt x 240.9pt>
+File: images/hallway1.png Graphic file (type png)
+<use images/hallway1.png>
+Package pdftex.def Info: images/hallway1.png  used on input line 327.
+(pdftex.def)             Requested size: 241.84946pt x 170.72038pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+<images/data_collection_system.png, id=37, 742.27313pt x 405.76593pt>
+File: images/data_collection_system.png Graphic file (type png)
+<use images/data_collection_system.png>
+Package pdftex.def Info: images/data_collection_system.png  used on input line 
+334.
+(pdftex.def)             Requested size: 241.84752pt x 170.71771pt.
+<images/grid.png, id=38, 455.301pt x 423.984pt>
+File: images/grid.png Graphic file (type png)
+<use images/grid.png>
+Package pdftex.def Info: images/grid.png  used on input line 348.
+(pdftex.def)             Requested size: 227.62215pt x 199.17545pt.
+
+[9 <./images/hallway1.PNG>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 127.
+(Font)              <9> on input line 362.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 127.
- [3]
-(./paper.aux)
+(Font)              <6> on input line 362.
+ [10 <./images/data_collection_system.png>]
+Overfull \hbox (0.84872pt too wide) in paragraph at lines 414--415
+[]\OT1/cmr/m/n/10 Using Python the two datasets were brought to-gether into a s
+in-gle \OT1/cmtt/m/n/10 DataFrame\OT1/cmr/m/n/10 .
+ []
+
+<images/initial_binary_search.png, id=47, 540.8205pt x 110.814pt>
+File: images/initial_binary_search.png Graphic file (type png)
+<use images/initial_binary_search.png>
+Package pdftex.def Info: images/initial_binary_search.png  used on input line 4
+18.
+(pdftex.def)             Requested size: 227.62169pt x 85.35915pt.
+[11 <./images/grid.PNG>]
+<images/initial_analysis_gridsearch.png, id=53, 536.75531pt x 117.43875pt>
+File: images/initial_analysis_gridsearch.png Graphic file (type png)
+<use images/initial_analysis_gridsearch.png>
+Package pdftex.def Info: images/initial_analysis_gridsearch.png  used on input 
+line 443.
+(pdftex.def)             Requested size: 227.62247pt x 85.35861pt.
+ [12 <./images/initial_binary_search.PNG> <./images/initial_analysis_gridsearch
+.png>]
+<images/new_data_results.png, id=59, 481.19775pt x 284.262pt>
+File: images/new_data_results.png Graphic file (type png)
+<use images/new_data_results.png>
+Package pdftex.def Info: images/new_data_results.png  used on input line 462.
+(pdftex.def)             Requested size: 227.62413pt x 199.17288pt.
+ [13 <./images/new_data_results.PNG>]
+<images/nn_settings.png, id=65, 526.21594pt x 63.23625pt>
+File: images/nn_settings.png Graphic file (type png)
+<use images/nn_settings.png>
+Package pdftex.def Info: images/nn_settings.png  used on input line 491.
+(pdftex.def)             Requested size: 227.62541pt x 28.45314pt.
+<images/embedded_algo_flowchart.png, id=66, 462.22687pt x 487.06969pt>
+File: images/embedded_algo_flowchart.png Graphic file (type png)
+<use images/embedded_algo_flowchart.png>
+Package pdftex.def Info: images/embedded_algo_flowchart.png  used on input line
+ 509.
+(pdftex.def)             Requested size: 227.62163pt x 227.62216pt.
+ [14 <./images/nn_settings.png>] [15 <./images/embedded_algo_flowchart.png>] [1
+6]
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+\OT1/cmr/m/n/9 / / developer . nvidia . com / embedded / dlc / Jetson[]Nano[]De
+veloper[]Kit[]User[]Guide$.
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 576--577
+[]\OT1/cmr/m/n/9 TensorFlow Lite Org., "Ten-sor-Flow Lite" [On-line]. Avail-abl
+e: $https : / / www .
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 577--578
+[]\OT1/cmr/m/n/9 TensorFlow Lite Org., "Ten-sor-Flow Lite" [On-line]. Avail-abl
+e: $https : / / www .
+ []
+
+[17] [18] (./paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1039 strings out of 474103
- 16283 string characters out of 5747481
- 1934496 words of memory out of 5000000
- 23465 multiletter control sequences out of 15000+600000
- 561885 words of font info for 49 fonts, out of 8000000 for 9000
+ 1966 strings out of 474103
+ 31065 string characters out of 5747481
+ 1938496 words of memory out of 5000000
+ 24357 multiletter control sequences out of 15000+600000
+ 562399 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,324b,366s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,9n,65p,399b,338s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2024/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmtt9.pfb>
-Output written on paper.pdf (3 pages, 106116 bytes).
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/te
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on paper.pdf (18 pages, 1570589 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
