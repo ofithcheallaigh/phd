@@ -47,16 +47,17 @@
 \maketitle              % typeset the title of the contribution
 
 \begin{abstract}
-    An ever-increasing number of people are living with visual impairments. 
-    As the machine learning techniques evolve alongside improving hardware available on embedded devices, 
-    there exists the potential to develop a system which can detect and localise objects in an indoor setting. 
-    This system would aim to detect objects and localise them, thereby allowing the user to navigate 
-    around these obstacles in an unfamiliar environment. 
-    The work presented here show the initial investigations into the development of such a system. 
-    The information presented will cover the investigation of a number of machine learning techniques as well as 
-    the deployment of a model onto a constrained device. 
+An ever-increasing number of people are living with visual impairments. 
+As the machine learning techniques evolve alongside improving hardware available on embedded devices, 
+there exists the potential to develop a system which can detect and localise objects in an indoor setting. 
+This system would aim to detect objects and localise them, thereby allowing the user to navigate 
+around these obstacles in an unfamiliar environment. 
+The work presented here show the initial investigations into the development of such a system. 
+The information presented will cover the investigation of a number of machine learning techniques as well as 
+the deployment of a model onto a constrained device. 
 
-    \keywords{Machine Learning, Deep Learning, Embedded Systems, The Edge, Neural Networks, Arduino}
+\keywords{Machine Learning, Deep Learning, Embedded Systems, The Edge, Neural Networks, Arduino}
+% \keywords{\mbox{Machine Learning}, \mbox{Deep Learning}, \mbox{Embedded Systems}, \mbox{The Edge}, \mbox{Neural Networks}, \mbox{Arduino}}
 \end{abstract}
 
 \section{Introduction}
@@ -411,9 +412,10 @@ The order of the datasets tested is shown in Table \ref{table:2}:
 \label{table:2}
 \end{table}
 
-Using Python the two datasets were brought together into a single \texttt{DataFrame}. The data was then into training and testing datasets using \texttt{train\_test\_split} with the default settings.
+Using Python the two datasets were brought together into a single \texttt{DataFrame}. The data was then into training and testing 
+datasets using 
+\texttt{train\_test\_split} with the default settings. The results of this analysis can be seen in Fig. \ref{fig:init_binary}
 
-The results of this analysis can be seen in Fig. \ref{fig:init_binary}
 \begin{figure}[ht]
 \includegraphics[width=8cm, height=3cm]{images/initial_binary_search.png}
 \centering
