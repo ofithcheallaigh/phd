@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.20)  28 APR 2024 22:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.20)  29 APR 2024 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -251,7 +251,7 @@ File: images/data_collection_system.png Graphic file (type png)
 <use images/data_collection_system.png>
 Package pdftex.def Info: images/data_collection_system.png  used on input line 
 335.
-(pdftex.def)             Requested size: 241.84752pt x 170.71771pt.
+(pdftex.def)             Requested size: 284.5245pt x 170.71771pt.
 <images/grid.png, id=38, 455.301pt x 423.984pt>
 File: images/grid.png Graphic file (type png)
 <use images/grid.png>
@@ -274,39 +274,35 @@ File: images/initial_binary_search.png Graphic file (type png)
 <use images/initial_binary_search.png>
 Package pdftex.def Info: images/initial_binary_search.png  used on input line 4
 20.
-(pdftex.def)             Requested size: 227.62169pt x 85.35915pt.
+(pdftex.def)             Requested size: 341.43666pt x 99.58455pt.
 [11 <./images/grid.PNG>]
 <images/initial_analysis_gridsearch.png, id=53, 536.75531pt x 117.43875pt>
 File: images/initial_analysis_gridsearch.png Graphic file (type png)
 <use images/initial_analysis_gridsearch.png>
 Package pdftex.def Info: images/initial_analysis_gridsearch.png  used on input 
 line 445.
-(pdftex.def)             Requested size: 227.62247pt x 85.35861pt.
-
-Underfull \vbox (badness 2547) has occurred while \output is active []
-
+(pdftex.def)             Requested size: 341.43372pt x 99.58505pt.
  [12 <./images/initial_binary_search.PNG> <./images/initial_analysis_gridsearch
 .png>]
 <images/new_data_results.png, id=59, 481.19775pt x 284.262pt>
 File: images/new_data_results.png Graphic file (type png)
 <use images/new_data_results.png>
 Package pdftex.def Info: images/new_data_results.png  used on input line 464.
-(pdftex.def)             Requested size: 227.62413pt x 199.17288pt.
-
-[13 <./images/new_data_results.PNG>]
+(pdftex.def)             Requested size: 341.43253pt x 227.62677pt.
+ [13 <./images/new_data_results.PNG>]
 <images/nn_settings.png, id=65, 526.21594pt x 63.23625pt>
 File: images/nn_settings.png Graphic file (type png)
 <use images/nn_settings.png>
 Package pdftex.def Info: images/nn_settings.png  used on input line 493.
-(pdftex.def)             Requested size: 227.62541pt x 28.45314pt.
-<images/embedded_algo_flowchart.png, id=66, 462.22687pt x 487.06969pt>
+(pdftex.def)             Requested size: 341.45016pt x 56.9063pt.
+ [14 <./images/nn_settings.png>]
+<images/embedded_algo_flowchart.png, id=70, 462.22687pt x 487.06969pt>
 File: images/embedded_algo_flowchart.png Graphic file (type png)
 <use images/embedded_algo_flowchart.png>
 Package pdftex.def Info: images/embedded_algo_flowchart.png  used on input line
  511.
 (pdftex.def)             Requested size: 227.62163pt x 227.62216pt.
- [14 <./images/nn_settings.png>] [15 <./images/embedded_algo_flowchart.png>] [1
-6]
+ [15 <./images/embedded_algo_flowchart.png>] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 573--574
 \OT1/cmr/m/n/9 / / developer . nvidia . com / embedded / dlc / Jetson[]Nano[]De
 veloper[]Kit[]User[]Guide$.
@@ -347,7 +343,7 @@ c/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/te
 xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on paper.pdf (18 pages, 1570600 bytes).
+Output written on paper.pdf (18 pages, 1570570 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
