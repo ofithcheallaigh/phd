@@ -11,7 +11,7 @@ class FlowerClient(fl.client.NumPyClient):
     def __init__(self,
                  trainloader,
                  valloader,
-                 num_class) -> None:
+                 num_classes) -> None:
         super().__init__()
 
         self.trainload = trainloader
@@ -47,7 +47,7 @@ class FlowerClient(fl.client.NumPyClient):
         # Do local training
         train(self.model, self.trainload, optim, epochs, self.device) # Model no longer has weights sent my the server
 
-        return self.get_parameters(), len(self.trainload), {}
+        return self.get_parameters({}), len(self.trainload), {}
 
     def evaluate(self,parameters: NDArrays, config: Dict[str, Scalar]):
         self.set_parameters(parameters)
