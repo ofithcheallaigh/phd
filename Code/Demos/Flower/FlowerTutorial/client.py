@@ -1,6 +1,8 @@
-from typing import Dict
+from collections import OrderedDict
+from typing import Dict, Tuple
 import flwr as fl
-from flwr.common import NDArrays
+from flwr.common import NDArrays, Scalar
+
 import torch
 
 from model import Net, train, test
@@ -53,3 +55,16 @@ class FlowerClient(fl.client.NumPyClient):
         loss, accuracy = test(self.model, self.valloader, self.device)
 
         return float(loss), len (self.valloader), {'accuracy': accuracy}
+
+def generate_client_fn(trainloaders, valloaders, num_classes):
+
+    def client_fn(cid: str):
+
+        return FlowerClient(trainloader=trainloaders[int(cid)],
+                            valloader=valloaders[int(cid)],
+                            num_class=num_classes,
+                            )
+
+
+
+    return client_fn
