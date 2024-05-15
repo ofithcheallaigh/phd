@@ -46,3 +46,10 @@ class FlowerClient(fl.client.NumPyClient):
         train(self.model, self.trainload, optim, epochs, self.device) # Model no longer has weights sent my the server
 
         return self.get_parameters(), len(self.trainload), {}
+
+    def evaluate(self,parameters: NDArrays, config: Dict[str, Scalar]):
+        self.set_parameters(parameters)
+
+        loss, accuracy = test(self.model, self.valloader, self.device)
+
+        return float(loss), len (self.valloader), {'accuracy': accuracy}
