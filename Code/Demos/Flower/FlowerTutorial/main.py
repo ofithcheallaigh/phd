@@ -1,8 +1,11 @@
 import hydra
+from hydra.core.hydra_config import HydraConfig
+
+
 from omegaconf import DictConfig, OmegaConf
 from dataset import prepare_dataset
 from client import generate_client_fn
-from Demos.Flower.FlowerTutorial.server import get_on_fit_config
+from server import get_on_fit_config
 
 from server import get_on_fit_config, get_evaluate_fn
 
