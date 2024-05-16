@@ -62,7 +62,7 @@ def generate_client_fn(trainloaders, valloaders, num_classes):
 
         return FlowerClient(trainloader=trainloaders[int(cid)],
                             valloader=valloaders[int(cid)],
-                            num_class=num_classes,
+                            num_classes=num_classes,
                             )
 
 
