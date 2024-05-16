@@ -1,0 +1,27 @@
+[2024-05-16 20:03:05,279][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=5, round_timeout=None)
+[2024-05-16 20:03:13,424][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 299910759.0, 'CPU': 8.0, 'node:127.0.0.1': 1.0, 'object_store_memory': 149955379.0}
+[2024-05-16 20:03:13,427][flwr][INFO] - Initializing global parameters
+[2024-05-16 20:03:13,427][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-16 20:03:15,469][flwr][ERROR] - [36mray::launch_and_get_parameters()[39m (pid=11332, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.31 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+18484	0.33GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+17816	0.29GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+7044	0.17GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+5796	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+5316	0.12GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=WAAAAAAAA
+1624	0.11GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\124.0.2478.97\msedgewebview2.exe --type=ren
+6380	0.11GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\124.0.2478.97\msedgewebview2.exe --type=ren
+18596	0.11GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+2748	0.09GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=gpu-process --user-data-
+19596	0.09GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
