@@ -49,4 +49,3 @@ def prepare_dataset(num_partitions: int,
     testloader = DataLoader(testset, batch_size=128)
 
     return trainloaders, valloaders, testloader
-     

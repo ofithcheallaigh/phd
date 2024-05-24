@@ -18,7 +18,7 @@ def main(cfg: DictConfig):
     print(OmegaConf.to_yaml(cfg))
 
     # 2. Prepare the dataset
-    trainloaders, validationloaders, testloaders = prepare_dataset(cfg.num_clients,
+    trainloaders, validationloaders, testloader = prepare_dataset(cfg.num_clients,
                                                                    cfg.batch_size)
 
     # 3. Define your clients
@@ -31,7 +31,7 @@ def main(cfg: DictConfig):
                                          min_evaluate_clients=cfg.num_clients_per_round_eval,
                                          min_available_clients=cfg.num_clients,
                                          on_fit_config_fn=get_on_fit_config(cfg.config_fit),
-                                         evaluate_fn=get_evaluate_fn(cfg.num_classes, testloaders)
+                                         evaluate_fn=get_evaluate_fn(cfg.num_classes, testloader)
                                          )
     
     # 5. Start simulation
