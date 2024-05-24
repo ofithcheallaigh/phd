@@ -1,0 +1,327 @@
+[2024-05-24 16:34:45,530][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=5, round_timeout=None)
+[2024-05-24 16:34:50,382][flwr][INFO] - Flower VCE: Ray initialized with resources: {'object_store_memory': 786445516.0, 'CPU': 8.0, 'node:127.0.0.1': 1.0, 'memory': 1572891035.0}
+[2024-05-24 16:34:50,383][flwr][INFO] - Initializing global parameters
+[2024-05-24 16:34:50,384][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-24 16:34:52,452][flwr][INFO] - Received initial parameters from one random client
+[2024-05-24 16:34:52,453][flwr][INFO] - Evaluating initial parameters
+[2024-05-24 16:34:55,089][flwr][INFO] - initial parameters (loss, other metrics): 182.12816953659058, {'accuracy': 0.0792}
+[2024-05-24 16:34:55,100][flwr][INFO] - FL starting
+[2024-05-24 16:34:55,101][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 100)
+[2024-05-24 16:34:56,418][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=6596, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_infer64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_infer64_8.dll" or one of its dependencies.
+[2024-05-24 16:34:56,426][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1948, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+[2024-05-24 16:34:56,445][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=6596, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_infer64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_infer64_8.dll" or one of its dependencies.
+[2024-05-24 16:34:56,459][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1948, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+[2024-05-24 16:34:56,547][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=18204, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+[2024-05-24 16:34:56,960][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=19228, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\torch_python.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\torch_python.dll" or one of its dependencies.
+[2024-05-24 16:34:57,366][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4836, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: 
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 831, in <module>
+    from .functional import *  # noqa: F403
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\functional.py", line 8, in <module>
+    import torch.nn.functional as F
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\nn\__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\nn\modules\__init__.py", line 18, in <module>
+    from .batchnorm import BatchNorm1d, BatchNorm2d, BatchNorm3d, SyncBatchNorm, \
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\nn\modules\batchnorm.py", line 9, in <module>
+    from ._functions import SyncBatchNorm as sync_batch_norm
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\nn\modules\_functions.py", line 4, in <module>
+    from torch.autograd.function import Function
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\autograd\__init__.py", line 17, in <module>
+    from .gradcheck import gradcheck, gradgradcheck
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\autograd\gradcheck.py", line 9, in <module>
+    from torch._vmap_internals import vmap, _vmap
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\_vmap_internals.py", line 7, in <module>
+    from torch.utils._pytree import _broadcast_to_and_flatten, tree_flatten, tree_unflatten
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\_pytree.py", line 38, in <module>
+    class NodeDef(NamedTuple):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\typing.py", line 1619, in __new__
+    nm_tpl = _make_nmtuple(typename, types.items())
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\typing.py", line 1594, in _make_nmtuple
+    nm_tpl = collections.namedtuple(name, [n for n, t in types])
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\collections\__init__.py", line 394, in namedtuple
+    exec(s, namespace)
+MemoryError
+[2024-05-24 16:35:00,960][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=19048, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=19048, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 48, in fit
+    train(self.model, self.trainload, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 7180, 18800) exited unexpectedly
+[2024-05-24 16:35:03,962][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9088, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=9088, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 48, in fit
+    train(self.model, self.trainload, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 6416, 5444) exited unexpectedly
+[2024-05-24 16:35:12,190][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=19428, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1114] A dynamic link library (DLL) initialization routine failed. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1114] A dynamic link library (DLL) initialization routine failed. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+[2024-05-24 16:35:12,194][flwr][DEBUG] - fit_round 1 received 0 results and 10 failures
+[2024-05-24 16:35:14,925][flwr][INFO] - fit progress: (1, 182.12816953659058, {'accuracy': 0.0792}, 19.824436900000002)
+[2024-05-24 16:35:14,926][flwr][DEBUG] - evaluate_round 1: strategy sampled 25 clients (out of 100)
+[2024-05-24 16:35:15,749][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=4836, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: name '_C' is not defined
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\__init__.py", line 3, in <module>
+    from torch.utils.data.sampler import (
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\sampler.py", line 1, in <module>
+    import torch
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 249, in <module>
+    for name in dir(_C):
+NameError: name '_C' is not defined
+[2024-05-24 16:35:17,476][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=18204, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+[2024-05-24 16:35:17,477][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=4836, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: name '_C' is not defined
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\__init__.py", line 3, in <module>
+    from torch.utils.data.sampler import (
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\sampler.py", line 1, in <module>
+    import torch
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 249, in <module>
+    for name in dir(_C):
+NameError: name '_C' is not defined
+[2024-05-24 16:35:17,545][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=6596, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+[2024-05-24 16:35:17,886][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=6596, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_train64_8.dll" or one of its dependencies.
