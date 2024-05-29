@@ -1,0 +1,288 @@
+[2024-05-28 17:54:04,855][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=5, round_timeout=None)
+[2024-05-28 17:54:09,838][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:127.0.0.1': 1.0, 'object_store_memory': 351226675.0, 'CPU': 8.0, 'memory': 702453351.0}
+[2024-05-28 17:54:09,839][flwr][INFO] - Initializing global parameters
+[2024-05-28 17:54:09,839][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-28 17:54:12,104][flwr][INFO] - Received initial parameters from one random client
+[2024-05-28 17:54:12,105][flwr][INFO] - Evaluating initial parameters
+[2024-05-28 17:54:14,614][flwr][INFO] - initial parameters (loss, other metrics): 181.88379788398743, {'accuracy': 0.127}
+[2024-05-28 17:54:14,614][flwr][INFO] - FL starting
+[2024-05-28 17:54:14,615][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 100)
+[2024-05-28 17:54:18,526][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.45 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.7GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.39GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+20836	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+19840	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+10668	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=WAAAAAAAA
+20700	0.11GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:18,776][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4516, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.46 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.66GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.38GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+20836	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+19840	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+10668	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=WAAAAAAAA
+20700	0.11GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:19,145][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10884, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.34 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.62GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.38GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+20836	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+19840	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+10668	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=WAAAAAAAA
+20700	0.1GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:19,198][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=16536, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.34 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.62GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.38GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+20836	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+19840	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+10668	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=WAAAAAAAA
+20700	0.1GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:19,411][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=14476, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.28 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.62GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.38GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+20836	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+19840	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+10668	0.13GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=WAAAAAAAA
+20700	0.1GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:21,571][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.38 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.57GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.36GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+4392	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+22436	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+20836	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+14320	0.12GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:21,743][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4516, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.35 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.57GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.36GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4392	0.21GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+7500	0.18GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+22436	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+20836	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+14320	0.12GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:22,262][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=14476, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.38 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.57GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.36GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+7500	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+4392	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+22436	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+20836	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+14320	0.12GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:22,343][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=16536, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.36 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.57GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.36GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+7500	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+4392	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+22436	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+20836	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+14320	0.12GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:22,344][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10884, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.36 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.57GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.36GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+7500	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+4392	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+22436	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13520	0.16GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+20836	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+14320	0.12GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:22,366][flwr][DEBUG] - fit_round 1 received 0 results and 10 failures
+[2024-05-28 17:54:24,957][flwr][INFO] - fit progress: (1, 181.88379788398743, {'accuracy': 0.127}, 10.3421309)
+[2024-05-28 17:54:24,958][flwr][DEBUG] - evaluate_round 1: strategy sampled 25 clients (out of 100)
+[2024-05-28 17:54:30,724][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.39 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+22176	0.38GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+18908	0.34GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+22436	0.3GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+16536	0.25GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+14476	0.25GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10884	0.25GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4516	0.24GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4392	0.21GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4580	0.19GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-28 17:54:34,116][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.48 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+18908	0.34GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+16536	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10884	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+14476	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4516	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+9084	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+22436	0.3GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4392	0.21GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+14320	0.21GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+7500	0.17GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
