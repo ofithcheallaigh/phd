@@ -16,13 +16,12 @@ class FlowerClient(fl.client.NumPyClient):
 
         self.trainload = trainloader
         self.valloader = valloader
-
         self.model = Net(num_classes) # Initialisation model
 
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     def set_parameters(self, parameters):
-        params_dict = zip(self.model.state_dict().keys(), parameters)
+        params_dict = zip(self.model.state_dict().keys(), parameters) # parameters from the server
 
         state_dict = OrderedDict({k: torch.Tensor(v) for k,v in params_dict})
 
@@ -47,7 +46,7 @@ class FlowerClient(fl.client.NumPyClient):
         # Do local training
         train(self.model, self.trainload, optim, epochs, self.device) # Model no longer has weights sent my the server
 
-        return self.get_parameters({}), len(self.trainload), {}
+        return self.get_parameters({}), len(self.trainloader), {}
 
     def evaluate(self,parameters: NDArrays, config: Dict[str, Scalar]):
         self.set_parameters(parameters)
