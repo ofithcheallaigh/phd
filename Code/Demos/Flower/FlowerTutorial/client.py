@@ -8,16 +8,14 @@ import torch
 from model import Net, train, test
 
 class FlowerClient(fl.client.NumPyClient):
-    def __init__(self,
-                 trainloader,
-                 valloader,
-                 num_classes) -> None:
+    def __init__(self, trainloader, valloader, num_classes) -> None:
         super().__init__()
 
-        self.trainload = trainloader
+        self.trainloader = trainloader
         self.valloader = valloader
-        self.model = Net(num_classes) # Initialisation model
+        self.model = Net(num_classes) # Initialisation model - a model that is randomly initialised at first
 
+        # Can the client access to GPU support or not
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     def set_parameters(self, parameters):
@@ -44,11 +42,11 @@ class FlowerClient(fl.client.NumPyClient):
         optim = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum)
 
         # Do local training
-        train(self.model, self.trainload, optim, epochs, self.device) # Model no longer has weights sent my the server
+        train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
 
         return self.get_parameters({}), len(self.trainloader), {}
 
-    def evaluate(self,parameters: NDArrays, config: Dict[str, Scalar]):
+    def evaluate(self, parameters: NDArrays, config: Dict[str, Scalar]):
         self.set_parameters(parameters)
 
         loss, accuracy = test(self.model, self.valloader, self.device)

@@ -1,0 +1,500 @@
+[2024-05-31 16:43:49,904][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=2, round_timeout=None)
+[2024-05-31 16:43:55,388][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 1438430823.0, 'CPU': 8.0, 'object_store_memory': 719215411.0, 'node:127.0.0.1': 1.0}
+[2024-05-31 16:43:55,390][flwr][INFO] - Initializing global parameters
+[2024-05-31 16:43:55,391][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-31 16:43:57,913][flwr][INFO] - Received initial parameters from one random client
+[2024-05-31 16:43:57,915][flwr][INFO] - Evaluating initial parameters
+[2024-05-31 16:44:00,465][flwr][INFO] - initial parameters (loss, other metrics): 182.2920641899109, {'accuracy': 0.0986}
+[2024-05-31 16:44:00,484][flwr][INFO] - FL starting
+[2024-05-31 16:44:00,485][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 100)
+[2024-05-31 16:44:02,118][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+[2024-05-31 16:44:02,240][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+[2024-05-31 16:44:02,298][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=12976, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_cnn_infer64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_cnn_infer64_8.dll" or one of its dependencies.
+[2024-05-31 16:44:02,320][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\shm.dll" or one of its dependencies.
+[2024-05-31 16:44:02,373][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=12052, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_infer64_8.dll" or one of its dependencies.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\__init__.py", line 128, in <module>
+    raise err
+OSError: [WinError 1455] The paging file is too small for this operation to complete. Error loading "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\lib\cudnn_adv_infer64_8.dll" or one of its dependencies.
+[2024-05-31 16:44:06,401][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10448, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=10448, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 15820, 4556) exited unexpectedly
+[2024-05-31 16:44:07,559][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=12052, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:07,979][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:12,385][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=6156, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=6156, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 8156, 5212) exited unexpectedly
+[2024-05-31 16:44:12,399][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=13084, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=13084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 16572, 7148) exited unexpectedly
+[2024-05-31 16:44:12,410][flwr][DEBUG] - fit_round 1 received 0 results and 10 failures
+[2024-05-31 16:44:14,966][flwr][INFO] - fit progress: (1, 182.2920641899109, {'accuracy': 0.0986}, 14.4865133)
+[2024-05-31 16:44:14,972][flwr][INFO] - evaluate_round 1: no clients selected, cancel
+[2024-05-31 16:44:14,973][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 100)
+[2024-05-31 16:44:15,611][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:15,816][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:16,520][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=12052, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:16,977][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=12052, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:16,978][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:17,121][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: module 'torch' has no attribute '_utils'
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 950, in persistent_load
+    nbytes = numel * torch._utils._element_size(dtype)
+AttributeError: module 'torch' has no attribute '_utils'
+[2024-05-31 16:44:21,156][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=13084, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=13084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 4680) exited unexpectedly
+[2024-05-31 16:44:21,724][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=6156, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=6156, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 4728) exited unexpectedly
+[2024-05-31 16:44:23,527][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=10972, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.25 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+19560	0.85GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=2
+10972	0.49GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+12052	0.41GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+6156	0.37GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13084	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10448	0.32GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+5244	0.2GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+4900	0.17GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+10528	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+12752	0.12GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-31 16:44:27,102][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=13084, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=13084, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 11540, 6856) exited unexpectedly
+[2024-05-31 16:44:27,118][flwr][DEBUG] - fit_round 2 received 0 results and 10 failures
+[2024-05-31 16:44:29,684][flwr][INFO] - fit progress: (2, 182.2920641899109, {'accuracy': 0.0986}, 29.1996928)
+[2024-05-31 16:44:29,685][flwr][INFO] - evaluate_round 2: no clients selected, cancel
+[2024-05-31 16:44:29,686][flwr][INFO] - FL finished in 29.201217399999997
+[2024-05-31 16:44:29,686][flwr][INFO] - app_fit: losses_distributed []
+[2024-05-31 16:44:29,687][flwr][INFO] - app_fit: metrics_distributed_fit {}
+[2024-05-31 16:44:29,687][flwr][INFO] - app_fit: metrics_distributed {}
+[2024-05-31 16:44:29,688][flwr][INFO] - app_fit: losses_centralized [(0, 182.2920641899109), (1, 182.2920641899109), (2, 182.2920641899109)]
+[2024-05-31 16:44:29,688][flwr][INFO] - app_fit: metrics_centralized {'accuracy': [(0, 0.0986), (1, 0.0986), (2, 0.0986)]}

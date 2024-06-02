@@ -25,9 +25,9 @@ def main(cfg: DictConfig):
     client_fn = generate_client_fn(trainloaders, validationloaders, cfg.num_classes)
     
     # 4. Define your strategy
-    strategy = fl.server.strategy.FedAvg(fraction_fit=0.00001,
+    strategy = fl.server.strategy.FedAvg(fraction_fit=0.0,
                                          min_fit_clients=cfg.num_clients_per_round_fit,
-                                         fraction_evaluate=0.00001,
+                                         fraction_evaluate=0.0,
                                          min_evaluate_clients=cfg.num_clients_per_round_eval,
                                          min_available_clients=cfg.num_clients,
                                          on_fit_config_fn=get_on_fit_config(cfg.config_fit),

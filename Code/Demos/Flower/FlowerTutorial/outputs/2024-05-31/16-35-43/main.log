@@ -1,0 +1,1302 @@
+[2024-05-31 16:35:43,997][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=5, round_timeout=None)
+[2024-05-31 16:35:50,474][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:127.0.0.1': 1.0, 'CPU': 8.0, 'memory': 663706830.0, 'object_store_memory': 331853414.0}
+[2024-05-31 16:35:50,478][flwr][INFO] - Initializing global parameters
+[2024-05-31 16:35:50,479][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-31 16:35:53,030][flwr][INFO] - Received initial parameters from one random client
+[2024-05-31 16:35:53,031][flwr][INFO] - Evaluating initial parameters
+[2024-05-31 16:35:55,755][flwr][INFO] - initial parameters (loss, other metrics): 182.30834650993347, {'accuracy': 0.0812}
+[2024-05-31 16:35:55,756][flwr][INFO] - FL starting
+[2024-05-31 16:35:55,757][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 100)
+[2024-05-31 16:36:01,910][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.52 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+11524	0.37GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10440	0.26GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+9400	0.25GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+20008	0.25GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+1916	0.24GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10996	0.17GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe -c from multiprocessing.s
+13940	0.16GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+4900	0.16GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+2736	0.16GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=utility --utility-sub-ty
+8212	0.14GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe c:\Users\B00830189\.vscode\exte
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-31 16:36:06,830][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.33 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+11524	0.37GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+20008	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+1916	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10996	0.24GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe -c from multiprocessing.s
+10440	0.23GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+2032	0.2GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe -c from multiprocessing.s
+13400	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+16948	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4900	0.16GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+13940	0.16GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --enable-dinosaur-easter-egg-a
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-31 16:36:10,899][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.42 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+11524	0.42GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+20008	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+1916	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+2032	0.24GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe -c from multiprocessing.s
+10440	0.23GiB	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\125.0.2535.67\msedgewebview2.exe --type=ren
+9400	0.19GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+13400	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+16948	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13248	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+4900	0.16GiB	C:\Users\B00830189\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-31 16:36:13,733][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 3640, 3628) exited unexpectedly
+[2024-05-31 16:36:15,913][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 22420, 11328) exited unexpectedly
+[2024-05-31 16:36:18,806][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 600, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node 2RWV8C3 is used (7.36 / 7.63 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+1916	0.38GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+11524	0.36GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+9672	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+20008	0.34GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+6548	0.25GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe -c from multiprocessing.s
+9400	0.19GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe main.py num_rounds=5
+13400	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+10212	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+16948	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+13248	0.16GiB	C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\python.exe C:\Users\B00830189\AppDat
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+[2024-05-31 16:36:19,321][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 4244, 5568) exited unexpectedly
+[2024-05-31 16:36:20,483][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=20008, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=20008, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 22432) exited unexpectedly
+[2024-05-31 16:36:20,491][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 19300, 11364) exited unexpectedly
+[2024-05-31 16:36:20,536][flwr][DEBUG] - fit_round 1 received 1 results and 9 failures
+[2024-05-31 16:36:20,583][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-31 16:36:23,587][flwr][INFO] - fit progress: (1, 178.49871587753296, {'accuracy': 0.2924}, 27.8300781)
+[2024-05-31 16:36:23,588][flwr][DEBUG] - evaluate_round 1: strategy sampled 25 clients (out of 100)
+[2024-05-31 16:36:30,853][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 4388) exited unexpectedly
+[2024-05-31 16:36:35,296][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=20008, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=20008, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 12552, 13832) exited unexpectedly
+[2024-05-31 16:36:35,956][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 18856, 22252) exited unexpectedly
+[2024-05-31 16:36:36,145][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 3068, 9224) exited unexpectedly
+[2024-05-31 16:36:37,282][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 20512, 10512) exited unexpectedly
+[2024-05-31 16:36:40,733][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=20008, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=20008, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 3212, 20612) exited unexpectedly
+[2024-05-31 16:36:42,293][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 11572, 17712) exited unexpectedly
+[2024-05-31 16:36:42,372][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 21664, 4044) exited unexpectedly
+[2024-05-31 16:36:43,273][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 11956, 12012) exited unexpectedly
+[2024-05-31 16:36:46,830][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=20008, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=20008, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 19708, 19188) exited unexpectedly
+[2024-05-31 16:36:48,280][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 6112, 21808) exited unexpectedly
+[2024-05-31 16:36:48,457][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 10952, 19656) exited unexpectedly
+[2024-05-31 16:36:49,206][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 768, 4820) exited unexpectedly
+[2024-05-31 16:36:54,087][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 11696, 12460) exited unexpectedly
+[2024-05-31 16:36:54,151][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 5900, 368) exited unexpectedly
+[2024-05-31 16:36:55,231][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 4004, 21872) exited unexpectedly
+[2024-05-31 16:36:59,715][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 20624, 3468) exited unexpectedly
+[2024-05-31 16:36:59,802][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 15916, 10684) exited unexpectedly
+[2024-05-31 16:37:00,986][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 3428, 5968) exited unexpectedly
+[2024-05-31 16:37:04,039][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=8460, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=8460, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 14928, 12204) exited unexpectedly
+[2024-05-31 16:37:05,419][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 6188, 12072) exited unexpectedly
+[2024-05-31 16:37:05,512][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 5736, 17300) exited unexpectedly
+[2024-05-31 16:37:06,836][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 21980, 21628) exited unexpectedly
+[2024-05-31 16:37:09,446][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=8460, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_evaluate()[39m (pid=8460, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 52, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 63, in test
+    for data in testloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 7140, 19196) exited unexpectedly
+[2024-05-31 16:37:09,472][flwr][DEBUG] - evaluate_round 1 received 0 results and 25 failures
+[2024-05-31 16:37:09,476][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 100)
+[2024-05-31 16:37:15,771][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=8460, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=8460, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 16780, 18732) exited unexpectedly
+[2024-05-31 16:37:16,184][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=8460, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: [enforce fail at C:\cb\pytorch_1000000000000\work\c10\core\impl\alloc_cpu.cpp:72] data. DefaultCPUAllocator: not enough memory: you tried to allocate 47040000 bytes.
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\storage.py", line 240, in _load_from_bytes
+    return torch.load(io.BytesIO(b))
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 795, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 1012, in _legacy_load
+    result = unpickler.load()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\serialization.py", line 953, in persistent_load
+    obj = cast(Storage, torch.UntypedStorage(nbytes))
+RuntimeError: [enforce fail at C:\cb\pytorch_1000000000000\work\c10\core\impl\alloc_cpu.cpp:72] data. DefaultCPUAllocator: not enough memory: you tried to allocate 47040000 bytes.
+[2024-05-31 16:37:16,199][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=8460, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 602, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 624, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 456, in ray._raylet.raise_if_dependency_failed
+ray.exceptions.RaySystemError: System error: 
+traceback: Traceback (most recent call last):
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 309, in deserialize_objects
+    obj = self._deserialize_object(data, metadata, object_ref)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 215, in _deserialize_object
+    return self._deserialize_msgpack_data(data, metadata_fields)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 174, in _deserialize_msgpack_data
+    python_objects = self._deserialize_pickle5_data(pickle5_data)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\ray\serialization.py", line 164, in _deserialize_pickle5_data
+    obj = pickle.loads(in_band)
+MemoryError
+[2024-05-31 16:37:16,789][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 3528, 19792) exited unexpectedly
+[2024-05-31 16:37:16,908][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 6820, 7976) exited unexpectedly
+[2024-05-31 16:37:16,994][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 11876, 20968) exited unexpectedly
+[2024-05-31 16:37:21,768][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=8460, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=8460, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 10516, 11392) exited unexpectedly
+[2024-05-31 16:37:22,602][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=11524, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 15920, 7700) exited unexpectedly
+[2024-05-31 16:37:22,703][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=9672, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 22204, 12976) exited unexpectedly
+[2024-05-31 16:37:22,804][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\multiprocessing\queues.py", line 108, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+[36mray::launch_and_fit()[39m (pid=1916, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 633, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 674, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 640, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 644, in ray._raylet.execute_task
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\flwr\client\app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\client.py", line 45, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device) # Model no longer has weights sent my the server
+  File "C:\Users\B00830189\OneDrive - Ulster University\phd\Code\Demos\Flower\FlowerTutorial\model.py", line 45, in train
+    for images, labels in trainloader:
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\B00830189\AppData\Local\anaconda3\envs\flower_tutorial\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 20572, 21416) exited unexpectedly
+[2024-05-31 16:37:22,820][flwr][DEBUG] - fit_round 2 received 0 results and 10 failures
+[2024-05-31 16:37:25,786][flwr][INFO] - fit progress: (2, 178.49871587753296, {'accuracy': 0.2924}, 90.0295969)
+[2024-05-31 16:37:25,787][flwr][DEBUG] - evaluate_round 2: strategy sampled 25 clients (out of 100)
+[2024-05-31 16:37:32,998][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.
+[2024-05-31 16:37:32,998][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.
+[2024-05-31 16:37:32,998][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.
+[2024-05-31 16:37:32,999][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.
+[2024-05-31 16:37:35,127][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.
+[2024-05-31 16:37:35,129][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.
+[2024-05-31 16:37:35,129][flwr][ERROR] - The task's local raylet died. Check raylet.out for more information.

@@ -7,6 +7,7 @@ from torch.utils.data import random_split, DataLoader
 def get_mnist(data_path: str = './data'):
 
     tr = Compose([ToTensor(), Normalize((0.1307,),(0.3081,))])
+
     trainset = MNIST(data_path, train=True, download=True, transform=tr)
     testset = MNIST(data_path, train=False, download=True, transform=tr)
 
@@ -41,7 +42,7 @@ def prepare_dataset(num_partitions: int,
         num_val = int(val_ratio * num_total)
         num_train = num_total - num_val
 
-        for_train, for_val = random_split(trainset_, (num_train, num_val), torch.Generator().manual_seed(2023))
+        for_train, for_val = random_split(trainset_, [num_train, num_val], torch.Generator().manual_seed(2023))
 
         trainloaders.append(DataLoader(for_train, batch_size=batch_side,shuffle=True,num_workers=2))
         valloaders.append(DataLoader(for_val, batch_size=batch_side,shuffle=False,num_workers=2))
